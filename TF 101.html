@@ -13472,6 +13472,42 @@ To tackle this a time out argument can be given to the lookup_transform,</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1><font color =red>Extra Content</font></h1>
+<h2><font color =crimson>Spawn a URDF Model in gazebo</font></h2>
+<p>This is an example of a launch file you could use to spawn URDF models into a Gazebo world:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="nt">&lt;launch&gt;</span>
+
+    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;x&quot;</span> <span class="na">default=</span><span class="s">&quot;0.0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;y&quot;</span> <span class="na">default=</span><span class="s">&quot;0.0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;z&quot;</span> <span class="na">default=</span><span class="s">&quot;0.0&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;urdf_robot_file&quot;</span> <span class="na">default=</span><span class="s">&quot;$(find your_pkg)/urdf/your_robot.urdf&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;robot_name&quot;</span> <span class="na">default=</span><span class="s">&quot;your_robot_model_name&quot;</span> <span class="nt">/&gt;</span>
+
+
+    <span class="c">&lt;!-- Load the URDF into the ROS Parameter Server --&gt;</span>
+    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;robot_description&quot;</span> <span class="na">command=</span><span class="s">&quot;cat $(arg urdf_robot_file)&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot --&gt;</span>
+    <span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;urdf_spawner&quot;</span> <span class="na">pkg=</span><span class="s">&quot;gazebo_ros&quot;</span> <span class="na">type=</span><span class="s">&quot;spawn_model&quot;</span> <span class="na">respawn=</span><span class="s">&quot;false&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span>
+    <span class="na">args=</span><span class="s">&quot;-urdf -x $(arg x) -y $(arg y) -z $(arg z)  -model $(arg robot_name) -param robot_description&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+<h2><font color =crimson>Delete a model from gazebo</font></h2>
+<p>To get a list of all the current models in gazebo:</p>
+<p><code>rosservice call /gazebo/get_world_properties "{}"</code></p>
+<p>To delete a paticular model from the above list:</p>
+<p><code>rosservice call /gazebo/delete_model "model_name: 'your_robot_model_name'"</code></p>
+<p><code></code></p>
+<div style="height: 1px;background-color:crimson"></div>
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
