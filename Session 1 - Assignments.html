@@ -13094,7 +13094,10 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color=red>**Kill all previous nodes before starting this question**</font></p>
 <p>2) In a new terminal start the <strong>turtlesim_node</strong> with node name "<strong>turtles</strong>" without any namespaces. In a seperate terminal copy paste the following command</p>
-<div class="highlight"><pre><span></span><span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">spawn</span> <span class="s2">&quot;x: 0.0 y: 0.0 theta: 0.0 name: &#39;turt&#39;&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">spawn</span> <span class="s2">&quot;x: 0.0</span>
+<span class="n">y</span><span class="p">:</span> <span class="mf">0.0</span>
+<span class="n">theta</span><span class="p">:</span> <span class="mf">0.0</span>
+<span class="n">name</span><span class="p">:</span> <span class="s1">&#39;turt&#39;</span><span class="s2">&quot;</span>
 </pre></div>
 <p>(<em>Do not worry if you do not understand the command it will be covered in the later classes</em>)
 If everything went fine you should see a new turtle in your <strong>turtlesim_node</strong>. 
