@@ -13145,6 +13145,51 @@ Now, figure out a way to use <strong>turtle_teleop_key</strong> to control the 2
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>6) Create a package "<strong>custom_service_assignment</strong>"<br>
+Launch the <strong>turtlebot3_house.launch</strong> launch file<br>
+Optional: Create a launch file "<strong>custom_service_launch.launch</strong>" to start the server and client</p>
+<p>Write a <strong>custom server</strong>:<br>
+request:  <strong>distance</strong> variable:  to move the turtlebot for the specified distance in Gazebo.<br>
+response: <strong>success</strong> flag ( to inform if the required distance was travelled by the bot)<br>
+          <strong>additional_message</strong> ( to give any additional information. eg: if the bot failed to cover the distance due to an obstacle)</p>
+<p>Your code needs to check for obstacles directly in front of the bot and stop the bot before it hits an obstacle. 
+If the bot is stoppped, then the successs flag should be flase and an appropriate additional_message should be sent.<br>
+(Hint: for calculating the distance use the /odom topic)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>7) Create an <strong>action server</strong> that when launched will accept a goal in <strong>seconds</strong> and <strong>record odometry data</strong> from the turtlebot for the number of seconds mentioned in the goal, while sending the current odometry reading once every second as <strong>feedback</strong>. Once the specified amount of time has passed, the <strong>action server</strong> should send all the collected odometry data in a list as the <strong>result</strong>.</p>
+<p>Also create the required action client to call the above server.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>8) For your final assignment, create a python script that would let you do everything from Q4, along with the added features of Q7. Also create a client that will call all the required services and actions. For example,</p>
+<p><strong>compound_server.py:</strong></p>
+<ul>
+<li>Publisher cmd_vel  </li>
+<li>Action server for odometry  </li>
+<li>Service server for Shape based moment  </li>
+</ul>
+<p><strong>compound_client.py:</strong></p>
+<ul>
+<li>Action client </li>
+<li>Service client </li>
+</ul>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
