@@ -435,7 +435,7 @@ Each topic of the action server uses its associated type of message accordingly.
 `rostopic pub /name_of_action_server/goal /type_of_the_message_used_by_the_topic parameters`
 
 ### Client
-```
+```python
 #! /usr/bin/env python
 import rospy
 import time
@@ -514,7 +514,7 @@ The axclient is, basically, a GUI tool provided by the actionlib package, that a
 `rosrun actionlib axclient.py /name_of_action_server`
 
 ### Server
-```
+```python
 #! /usr/bin/env python
 
 import rospy
