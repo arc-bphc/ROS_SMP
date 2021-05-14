@@ -17,7 +17,16 @@ Make a game of tic tac toe. Ezpz.
     ```sh
         python main.py # This exact command will be used to evaluate your submissions
     ```
+## Project Structure
 
+tictactoe
+    └── main.py
+    └── [module1].py
+    .
+    .
+    └── [modulen].py
+
+> Replace [modulei].py with whatever you name your files
 
 
 ## Detailed Instructions for VS Code
