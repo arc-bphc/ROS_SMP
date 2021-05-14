@@ -9,10 +9,11 @@ Make a game of tic tac toe. Ezpz.
 3. That being said, feel free to look up stuff online about how to do something very specific, or if youa re getting an error. 
    1. Python documentation and stackoverflow will be your best friends
 4. The exercise will not be graded. We can review your submissions and code if you wish
-5. Follow pep8 guidelines. I will not read any uncommented code
+5. Comment your code. Explain logic, and not that the next line is a for loop. I can read that myself. 
+7. Follow pep8 guidelines. I will not read any unformatted code.
    1. How? Install autopep8 or something. [Detailed Instructions for VS Code](#detailed-instructions-for-vs-code)
-6. Use multiple files, to keep your project clean and maintainable
-7. Have a main.py file, running which starts the game. For example
+8. Use multiple files, to keep your project clean and maintainable
+9. Have a main.py file, running which starts the game. For example
     ```sh
         python main.py # This exact command will be used to evaluate your submissions
     ```
@@ -25,6 +26,3 @@ Make a game of tic tac toe. Ezpz.
    > autopep8 not installed. Install now? 
 3. Click on install. 
 4. After it is done installing, you can use `Ctrl+Shift+P > Format Document` to format your documents. 
-
-
-
