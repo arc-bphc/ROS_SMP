@@ -56,23 +56,23 @@ oo      oo
 ### Sample Board
 
 ```
- xx      xx |            |            | 
-   xx  xx   |            |            |
-     xx     |            |            |
-   xx  xx   |            |            |
- xx      xx |            |            |
-------------|------------|--------------
-|           |    oooo    |            |
-|           |  oo    oo  |            |
-|           | oo      oo |            |
-|           |  oo    oo  |            |
-|           |    oooo    |            |
-------------|------------|--------------
-|           | xx      xx |            |
-|           |   xx  xx   |            |
-|           |     xx     |            |
-|           |   xx  xx   |            |
-|           | xx      xx |            |
+| xx      xx |            |            | 
+|   xx  xx   |            |            |
+|     xx     |            |            |
+|   xx  xx   |            |            |
+| xx      xx |            |            |
+-------------|------------|--------------
+|            |    oooo    |            |
+|            |  oo    oo  |            |
+|            | oo      oo |            |
+|            |  oo    oo  |            |
+|            |    oooo    |            |
+-------------|------------|--------------
+|            | xx      xx |            |
+|            |   xx  xx   |            |
+|            |     xx     |            |
+|            |   xx  xx   |            |
+|            | xx      xx |            |
 ```
 
 ## Detailed Instructions for VS Code
