@@ -27,6 +27,54 @@ tictactoe
     └── [modulen].py # Replace [modulei].py with whatever you name your files
 ```
 
+## Sprites
+
+Every new game state should output the board in the following format:
+
+### X:
+
+
+```
+xx      xx
+  xx  xx
+    xx
+  xx  xx
+xx      xx   
+```
+
+
+### O:
+
+```
+   oooo 
+ oo    oo
+oo      oo
+ oo    oo
+   oooo 
+```
+
+### Sample Board
+
+```
+ xx      xx |            |            | 
+   xx  xx   |            |            |
+     xx     |            |            |
+   xx  xx   |            |            |
+ xx      xx |            |            |
+------------|------------|--------------
+|           |    oooo    |            |
+|           |  oo    oo  |            |
+|           | oo      oo |            |
+|           |  oo    oo  |            |
+|           |    oooo    |            |
+------------|------------|--------------
+|           | xx      xx |            |
+|           |   xx  xx   |            |
+|           |     xx     |            |
+|           |   xx  xx   |            |
+|           | xx      xx |            |
+```
+
 ## Detailed Instructions for VS Code
 1. Press `ctrl+shift+P`
 2. Search for Format Document. You should get a popup which says, something along the lines of 
