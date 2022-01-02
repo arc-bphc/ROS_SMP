@@ -1,4 +1,6 @@
 # Session 1 - Assignment
+**NOTE- The "turtlesim_node" and "turtle_teleop_key" nodes are part of the turtlesim package, make sure its installed before attempting questions 1 and 2**
+
 1) In a terminal start the **turtlesim_node** with node name as "**my_node_1**" in the namespace "**name**". In a seperate terminal start the **turtle_teleop_key** with node name as "**my_node_2**" without any namespaces, and remap the topic such that it can send telemetry data to the turtlesim_node and move the turtle around.
 
 **Kill all previous nodes before starting this question**
