@@ -29,8 +29,8 @@ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 4) In the previously created package, create a custom message named "**JangoFett.msg**" it should have the following structure:
 ```bash
-Int32 side
-String shape
+std_msgs/Int32 side
+std_msgs/String shape
 ```
 now, create a new python script called "**move_upgraded.py**" it should listen to the topic called "**/darkside**" which is based on the custom message you created "**JangoFett.msg**", if the shape contains "**circle**" the turtlebot3 should move in a circle where the peremter is propotional to the integer entered in the "**side**", if the shape "**square**", the turtlebot3 should move in a square where the side length is propotional to the integer entered in the "**side**"
 
